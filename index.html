@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/main.css">
+    <title>AutoPro — автосервіс</title>
+    <script src="js/main.js" defer></script>
+    <script src="js/scripts.js" defer></script>
+</head>
+<body id="top">
+
+
+
+    <header class="footer-top">
+        <div class="header-inner">
+
+        <a href="#top" class="logo">
+
+            <span class="logo__text">
+            AUTOPRO
+            <small>Спеціалізований автосервіс</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle button" type="button" aria-expanded="false" aria-controls="main-nav">Меню</button>
+        <nav class="main-nav" id="main-nav" aria-label="Головна навігація">
+            <ul>
+            <li><a href="#about">Про сервіс</a></li>
+            <li><a href="#services">Послуги</a></li>
+            <li><a href="#prices">Ціни</a></li>
+
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+
+            <span class="lang-select" lang="uk">UA</span>
+
+
+            <div class="phone-block">
+            <span class="phone-number">------------</span>
+            <span class="phone-hours">Пн–Сб з 09:00 до 19:00</span>
+            </div>
+        </div>
+
+        </div>
+    </header>
+
+
+    <main id="root">
+
+
+        <figure class="photo">
+            <img src="static/images/image.png" alt="Майстри автосервісу AutoPro за роботою">
+        </figure>
+
+
+        <section id="about" class="section section--intro">
+        <div class="section__head">
+            <h1>AutoPro — спеціалізований автосервіс у Києві</h1>
+        </div>
+        <p class="lead">
+            Наш автосервіс — це сучасний центр технічного обслуговування автомобілів, який працює
+            понад 10 років. Ми спеціалізуємося на комплексній діагностиці, профілактиці та ремонті
+            легкових автомобілів усіх марок. Наша команда — це кваліфіковані майстри з багаторічним
+            досвідом, які використовують сучасне діагностичне обладнання та сертифіковані інструменти.
+            Ми гарантуємо високу якість робіт, чесні ціни та індивідуальний підхід до кожного клієнта.
+            Ваша безпека на дорозі — наш головний пріоритет.
+        </p>
+        <button class="details-toggle button" type="button" aria-expanded="false" aria-controls="extra-details">Більше про сервіс</button>
+        <div id="extra-details" class="extra-details is-hidden">
+            <h2>Як ми працюємо</h2>
+            <p>Спочатку оглядаємо автомобіль та визначаємо причину несправності. Пояснюємо обсяг робіт і погоджуємо кошторис до початку ремонту. Після обслуговування перевіряємо результат та надаємо рекомендації.</p>
+            <p>Перед візитом підготуйте марку, модель, рік випуску та короткий опис проблеми.</p>
+        </div>
+        </section>
+
+
+        <section id="services" class="section">
+        <div class="feature-card">
+            <div class="feature-card__text">
+                <div class="section__head">
+                    <h2>Послуги</h2>
+                </div>
+
+                <p class="lead">Знайдіть потрібну послугу за назвою або описом та оберіть напрям обслуговування.</p>
+                <div class="catalog-controls">
+                    <label for="service-search">Пошук послуг
+                        <input id="service-search" type="search" placeholder="Наприклад, мастило" autocomplete="off">
+                    </label>
+                    <label for="category-filter">Категорія
+                        <select id="category-filter">
+                            <option value="all">Усі</option>
+                            <option value="diagnostics">Діагностика</option>
+                            <option value="maintenance">Технічне обслуговування</option>
+                            <option value="repair">Ремонт</option>
+                            <option value="wheels">Колеса</option>
+                        </select>
+                    </label>
+                    <button id="reset-filters" class="button" type="button">Скинути фільтри</button>
+                </div>
+                <label class="favorites-filter"><input id="favorites-only" type="checkbox"> Лише обрані</label>
+                <p id="favorite-status" class="status-text" role="status">Обрано послуг: 0. Вибір діє до перезавантаження сторінки.</p>
+                <p id="results-count" class="status-text" role="status" aria-live="polite" aria-atomic="true"></p>
+                <div id="service-grid" class="service-grid"></div>
+                <p id="empty-message" class="empty-message is-hidden">Нічого не знайдено. Змініть запит або скиньте фільтри.</p>
+                <noscript>Для пошуку та перегляду каталогу увімкніть JavaScript. Основні ціни наведено нижче.</noscript>
+
+            </div>
+        </div>
+        </section>
+
+
+        <section id="prices" class="section">
+        <div class="section__head">
+            <h2>Ціни</h2>
+        </div>
+        <ul class="price-list">
+            <li class="price-row">
+                <span class="price-row__name">Комп'ютерна діагностика двигуна</span>
+                <span class="price-row__value">від 500 грн</span>
+            </li>
+
+            <li class="price-row">
+                <span class="price-row__name">Заміна моторного мастила та фільтра</span>
+                <span class="price-row__value">від 300 грн</span>
+            </li>
+
+            <li class="price-row">
+            <span class="price-row__name">
+                Діагностика ходової частини
+                <small>безкоштовно за умови ремонту у нас</small>
+            </span>
+
+            <span class="price-row__value">350 грн</span>
+            </li>
+
+            <li class="price-row">
+                <span class="price-row__name">Заміна гальмівних колодок (одна вісь)</span>
+                <span class="price-row__value">від 600 грн</span>
+            </li>
+
+            <li class="price-row">
+                <span class="price-row__name">Регулювання розвалу-сходження (1 вісь)</span>
+                <span class="price-row__value">від 650 грн</span>
+            </li>
+
+            <li class="price-row">
+                <span class="price-row__name">Шиномонтаж (комплект 4 коліс з балансуванням)</span>
+                <span class="price-row__value">від 1200 грн</span>
+            </li>
+
+            <li class="price-row">
+                <span class="price-row__name">Нормо-час робіт майстра</span>
+                <span class="price-row__value">600 грн/год</span>
+            </li>
+
+        </ul>
+        </section>
+    </main>
+
+
+    <footer class="footer-bottom">
+        <div class="footer-bottom__inner">
+
+
+        <div class="footer-bottom__col">
+            <p class="footer-bottom__title">Контакти</p>
+            <p><a href="https://t.me/Nextems">Telegram</a></p>
+            <p><a href="">---------</a></p>
+        </div>
+
+        <div class="footer-bottom__col">
+            <p class="footer-bottom__title">Телефони</p>
+            <p><a href="">--------------</a></p>
+            <p><a href="">--------------</a></p>
+        </div>
+
+        <div class="footer-bottom__col">
+            <p class="footer-bottom__title">Графік роботи</p>
+            <p>Пн–Сб з 09:00 до 19:00</p>
+            <p>Неділя — вихідний</p>
+        </div>
+
+        </div>
+    </footer>
+
+
+</body>
+</html>
